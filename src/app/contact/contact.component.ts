@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../contact.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-contact-list',
+  templateUrl: './contact-list.component.html',
+  styleUrls: ['./contact-list.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactListComponent implements OnInit {
 
-  constructor() { }
+  contacts: any[] = [];
+  
+
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
+    this.contactService.getContacts().subscribe((data : any[])=>{
+        console.log(data);
+        this.contacts = data;
+    })
   }
-
-}
