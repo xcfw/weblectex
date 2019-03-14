@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'weblectex the lecture example';
-  numbere = '123';
+  title = 'angular7-router-demo';
 }
