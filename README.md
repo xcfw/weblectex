@@ -69,5 +69,3 @@ import {InMemoryDbService} from 'angular-in-memory-web-api'
 ng g s contact
 
 <h2><a [routerLink] = "'/contacts'">Contacts</a></h2>
-
-https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
